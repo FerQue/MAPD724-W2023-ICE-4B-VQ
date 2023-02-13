@@ -4,7 +4,6 @@ import GameplayKit
 
 class GameViewController: UIViewController {
 
-    // Instance Variables
     var currentScene: GKScene?
     
     @IBOutlet weak var LivesLabel: UILabel!

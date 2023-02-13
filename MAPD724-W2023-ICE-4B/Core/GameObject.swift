@@ -3,7 +3,7 @@ import SpriteKit
 
 class GameObject : SKSpriteNode, GameProtocol
 {
-    // public instance members
+   
     var horizontalSpeed: CGFloat?
     var verticalSpeed: CGFloat?
     var width: CGFloat?
@@ -15,15 +15,12 @@ class GameObject : SKSpriteNode, GameProtocol
     var randomSource: GKARC4RandomSource?
     var randomDist: GKRandomDistribution?
     
-    // Constructor / Initializer
     init(imageString: String, initialScale: CGFloat)
     {
-        // initialize the game object with an image
         let texture = SKTexture(imageNamed: imageString)
         let color = UIColor.clear
         super.init(texture: texture, color: color, size: texture.size())
         
-        // configuration
         scale = initialScale
         setScale(scale!)
         width = texture.size().width * scale!
@@ -40,7 +37,6 @@ class GameObject : SKSpriteNode, GameProtocol
         fatalError("init(coder:) has not been implemented")
     }
     
-    // LifeCycle Functions
     func Start()
     {
         
